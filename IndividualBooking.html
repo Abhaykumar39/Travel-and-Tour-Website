@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+      .header {
+        background: url("Images1/background 6.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .input {
+        width: 80%;
+        max-width: 600px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .input h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .input label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .input input[type="text"],
+      .input input[type="email"],
+      .input input[type="number"],
+      .input select,
+      .input input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+      }
+      .input input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .input input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <link rel="stylesheet" href="packages/package.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h4>MR.travel</h4>
+        <ul>
+          <li><a href="../travel_tour_website.html">Discover</a></li>
+          <li><a href="../TOUR.html">Package</a></li>
+          <li><a href="../Hotel_homepage.html">Hotel</a></li>
+          <li><a href="../contactUs.html">Contact</a></li>
+          <li><a href="#" id="signInLink">Sign In</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="header">
+      <div class="input">
+        <h1>Book Yourself a Ride</h1>
+        <form action="http://localhost:3000/book" method="POST">
+            <label for="Name">Full Name</label>
+            <input type="text" name="name" placeholder="Enter your full name" required />
+        
+            <label for="Mobile">Mobile Number</label>
+            <input type="tel" name="mobile" placeholder="Enter your mobile number" required />
+    
+            <label for="city">City</label>
+            <select name="package" id="city">City
+                <option value="dehradun">Dehradun</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Jaipur">Jaipur</option>
+
+            </select>
+        
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male" style="display: inline-block; margin: 10px">Male</label>
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="female" style="display: inline-block; margin: 10px">Female</label>
+        
+            <label for="travel">Date to Travel</label>
+            <input type="date" name="travelDate" placeholder="Select your travel date" />
+        
+            <input type="submit" value="PROCEED" />
+        </form>
+        
+      </div>
+    </div>
+    
+    <script src="travel_tour_website.js"></script>
+  </body>
+</html>

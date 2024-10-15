@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .confirmation-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            margin-top: 50px;
+        }
+        .confirmation-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .confirmation-info {
+            margin-bottom: 20px;
+        }
+        .confirmation-info p {
+            margin-bottom: 10px;
+        }
+        .confirmation-btn {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="confirmation-container">
+    <h2 class="confirmation-title">Booking Confirmation</h2>
+    <div class="confirmation-info">
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+        <p><strong>Package:</strong> <span id="package"></span></p>
+        <p><strong>Gender:</strong> <span id="gender"></span></p>
+        <p><strong>Travel Date:</strong> <span id="travelDate"></span></p>
+    </div>
+    <div class="confirmation-btn">
+       <a href="payment.html"><button class="btn btn-primary" id="price">Pay</button></a> 
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        // Extract booking details from URL parameters
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        // Update the HTML content with the booking details
+        document.getElementById('name').innerText = urlParams.get('name');
+        document.getElementById('mobile').innerText = urlParams.get('mobile');
+        document.getElementById('package').innerText = urlParams.get('package');
+        document.getElementById('gender').innerText = urlParams.get('gender');
+        document.getElementById('travelDate').innerText = urlParams.get('travelDate');
+        document.getElementById('price').innerText = urlParams.get('price');
+
+    };
+</script>
+
+</body>
+</html>

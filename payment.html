@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Card Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Card Details</h2>
+        <form id="card-form" method="POST" action="http://localhost:3000/add-card">
+            <label for="cardholderName">Cardholder Name:</label>
+            <input type="text" id="cardholder-name" name="cardholderName" required>
+            
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="card-number" name="cardNumber" required>
+            
+            <div style="display: flex;">
+                <div style="flex: 1; margin-right: 10px;">
+                    <label for="expiry-month">Expiration Month:</label>
+                    <input type="number" id="expiry-month" name="expiryMonth" min="1" max="12" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="expiry-year">Expiration Year:</label>
+                    <input type="number" id="expiry-year" name="expiryYear" min="2022" required>
+                </div>
+            </div>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

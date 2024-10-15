@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="Hotel_homepage.css">
+</head>
+<body>
+    <div class="blur-background"></div>
+    <div class="input-container">
+        <h1>Modern and Spacious Rooms</h1>
+        <form id="searchForm"> 
+            <div class="input-group">
+                <label for="location">Location:</label>
+                <select name="location" id="location">
+                    <option>Uttarakhand</option>
+                    <option>Shimla</option>
+                    <option>Goa</option>
+                    <option>Uttar-Pradesh</option>
+                    <option>Rajasthan</option>
+                    <option>Delhi</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="check-in">Check-In:</label>
+                <input type="date" id="check-in">
+            </div>
+            <div class="input-group">
+                <label for="check-out">Check-Out:</label>
+                <input type="date" id="check-out">
+            </div>
+            <div class="input-group">
+                <label for="rooms">Rooms:</label>
+                <input type="number" id="rooms" placeholder="1">
+            </div>
+            <button>Search</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var location = document.getElementById("location").value;
+
+            if (location === "Uttarakhand") {
+                window.location.href = "Uttarakhand_Hotel.html";
+            } else if (location === "Shimla") {
+                window.location.href = "Shimla_hotel.html";
+            }
+          
+        });
+    </script>
+</body>
+</html>

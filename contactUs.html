@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Us</title>
+    <style>/* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h4 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #ddd;
+        }
+        
+        #signInLink {
+            background-color: #fff;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        
+        #signInLink:hover {
+            background-color: #ddd;
+        }
+        </style>
+        <script src="travel_tour_website.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h4>MR.travel</h4>
+            <ul>
+                <li><a href="travel_tour_website.html">Discover</a></li>
+                <li><a href="TOUR.html">Package</a></li>
+                <li><a href="Hotel_homepage.html">Hotel</a></li>
+                <li><a href="contactUs.html">Contact</a></li>
+                <li><a href="#" id="signInLink">Sign In</a></li>
+            </ul>
+        </nav></header>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>If you have any problem related to booking of your tour and any issues related to this website you can contact us and gets the best solution from our team.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>4671 Annad Vihar,<br>Premnagar,Dehradun <br>248007</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="bi bi-phone-fill"></i>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>789-345-9991</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>Abhay@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="name" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" id="" cols="20" rows="5" required></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
